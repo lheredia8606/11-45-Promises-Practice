@@ -7,8 +7,10 @@ do something asynchronously?
 Imagine three functions that return promises with the code beneath:
 
 ```js
-Parse.User.logIn("user", "pass").then(function (query) {
-  query.find().then(function (results) {
+Parse.User.logIn("user", "pass")
+.then(function (query) {
+  query.find()
+.then(function (results) {
     results[0].save({ key: value }).then(function (result) {
       // the object was saved
     });
